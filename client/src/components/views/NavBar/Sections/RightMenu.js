@@ -91,17 +91,27 @@ function RightMenu(props) {
               </Menu.Item>
             </MenuItemGroup>
           </SubMenu>
-          <SubMenu title={<span>Administración</span>}>
+          <SubMenu title={<span>Sistema</span>}>
+            <MenuItemGroup className="mr-5" title="">
+              <Menu.Item key="gestionarUser">
+              <a href="/gestionarUser">Usuarios</a>
+            </Menu.Item>
+              <Menu.Item key="app">
+                <a onClick={()=> {props.history.push("/register")}}>Crear Usuario</a>
+              </Menu.Item>
+            </MenuItemGroup>
+          </SubMenu>
+          <SubMenu title={<span>Administracion</span>}>
             <MenuItemGroup className="mr-5" title="">
               <Menu.Item key="contabilidad">
                 <a href="/contabilidad">Contabilidad</a>
               </Menu.Item>
-              <Menu.Item key="gestionarUser">
-              <a href="/gestionarUser">Empleados</a>
+              <Menu.Item key="gestionarEmpleado">
+              <a href="/gestionarEmpleado">Empleados</a>
             </Menu.Item>
-              <Menu.Item key="app">
-                <a onClick={()=> {props.history.push("/register")}}>Crear Empleado</a>
-              </Menu.Item>
+            <Menu.Item key="addEmpleado">
+              <a href="/addEmpleado">Agregar Empleado</a>
+            </Menu.Item>
             </MenuItemGroup>
           </SubMenu>
         </Menu>

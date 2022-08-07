@@ -9,6 +9,7 @@ const Siniestro = require('../../models/SiniestroSin')
 const Novedad = require('../../models/NovedadSin')
 const LoginAuditory = require('../../models/loginAuditory')
 const { User } = require('../../models/User')
+const Empleado = require('../../models/EmpleadoAdm')
 
 
 router.get('/getUsersAuditory', (req, res) => {
@@ -50,6 +51,14 @@ router.get('/getVehiculos', (req, res) => {
 
 router.get('/getAsegurados', (req, res) => {
   Asegurado.find()
+    .exec((err, data) => {
+      if (err) return res.status(400).send(err)
+      res.status(200).json({ success: true, data })
+    })
+})
+
+router.get('/getEmpleados', (req, res) => {
+  Empleado.find()
     .exec((err, data) => {
       if (err) return res.status(400).send(err)
       res.status(200).json({ success: true, data })
@@ -108,6 +117,16 @@ router.post('/addVehiculo', (req, res) => {
 router.post('/addEntrevista', (req, res) => {
   const entrevista = new Entrevista(req.body)
   entrevista.save((err, doc) => {
+    if (err) return res.json({ success: false, err })
+    return res.status(200).json({
+      success: true
+    })
+  })
+})
+
+router.post('/addEmpleado', (req, res) => {
+  const empleado = new Empleado(req.body)
+  empleado.save((err, doc) => {
     if (err) return res.json({ success: false, err })
     return res.status(200).json({
       success: true

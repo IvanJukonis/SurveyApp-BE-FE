@@ -1,0 +1,102 @@
+.tableMain {
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  border-spacing: 0;
+  table-layout: auto;
+  border-collapse: collapse;
+  box-shadow: 0px 6px 6px rgba(33, 33, 33, .2);
+}
+
+.tableMain thead {
+  box-shadow: 0px 3px 5px rgba(33, 33, 33, .1);
+}
+
+.tableMain thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.tableMain thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.tableMain tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.tableMain tbody tr:last-child td:last-child {
+  border-top-right-radius: 8px;
+}
+
+.tableMain tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.containerTable tr,
+.tableMain tr {
+  text-align: left;
+  color: #373867;
+  border-bottom: 1px solid #bebec8;
+}
+
+
+.containerTable td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+.headTable,
+.tableMain th {
+  padding: 14px 12px;
+  background-color: #d9dbe2;
+}
+
+.containerTable svg {
+  fill: #373867;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.tableMain tbody tr:hover {
+  background: #eef5eb;
+}
+
+.buttonsTableTd {
+  width: 75px;
+}
+
+.buttonsTableContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.noButton {
+  text-align: center;
+}
+
+.buttonTable,
+.containerTable a {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: none;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttonTable:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.containerTable svg.deleteSvg:hover {
+  fill: #ff0000;
+  transition: all 0.2s ease-in-out;
+}
+
+td.buttonTd {
+  padding: 0 12px;
+  width: 130px;
+}

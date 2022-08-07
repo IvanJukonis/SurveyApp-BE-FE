@@ -81,14 +81,18 @@ function LeftMenu(props) {
             </Menu.Item>
           </MenuItemGroup>
         </SubMenu>
-        <SubMenu title={<span>Excel</span>}>
+        <SubMenu title={<span>Instructivos</span>}>
           <MenuItemGroup title="">
-            <Menu.Item key="excel">
-              <a href="/excel">Excel</a>
+            <Menu.Item key="landing">
+              <a href="/landing">Manual</a>
+            </Menu.Item>
+            <Menu.Item key="landing">
+              <a href="/landing">Archivos</a>
             </Menu.Item>
           </MenuItemGroup>
         </SubMenu>
       </Menu>
+      
     );
   }
   return body;

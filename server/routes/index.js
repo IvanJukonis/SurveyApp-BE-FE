@@ -7,6 +7,8 @@ const novedadSin = require('./Novedad/novedadIndex')
 const entrevistaSin = require('./Entrevista/entrevistaIndex')
 const siniestroSin = require('./Siniestro/siniestroIndex')
 const admin = require('./AdminFunction/adminFunction')
+const empleadoAdm = require('./Empleado/empleadoIndex')
+
 
 
 const router = express.Router()
@@ -20,5 +22,6 @@ router.use('/api/entrevista', entrevistaSin)
 router.use('/api/novedad', novedadSin)
 router.use('/api/siniestro', siniestroSin)
 router.use('/api/admin', admin)
+router.use('/api/empleado', empleadoAdm)
 
 module.exports = router

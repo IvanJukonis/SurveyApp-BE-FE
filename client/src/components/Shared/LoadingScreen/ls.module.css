@@ -1,0 +1,17 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.svg {
+  margin-left: 20vw;
+  margin-bottom: 20vh;
+}

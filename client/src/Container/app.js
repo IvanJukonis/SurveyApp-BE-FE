@@ -21,6 +21,9 @@ import gestionarAsegurado from "../components/views/Pages/gestionarAsegurados/ge
 import gestionarTercero from "../components/views/Pages/gestionarTerceros/gestionarTercero";
 import gestionarSiniestro from "../components/views/Pages/gestionarSiniestros/gestionarSiniestro";
 import gestionarUser from "../components/views/Pages/gestionarUsers/gestionarUser";
+import gestionarEmpleado from "../components/views/Pages/gestionarEmpleados/gestionarEmpleado";
+import AddEmpleado from "../components/views/Pages/AdminAddEmpleado/adminAddEmpleado";
+import Landing from "../Landing/landing";
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -63,6 +66,9 @@ class App extends Component {
             <Route exact path="/gestionarTercero" component={Auth(gestionarTercero, true)}/>
             <Route exact path="/gestionarAsegurado" component={Auth(gestionarAsegurado, true)}/>
             <Route exact path="/gestionarUser" component={Auth(gestionarUser, true)}/>
+            <Route exact path="/landing" component={Auth(Landing, true)}/>
+            <Route exact path="/gestionarEmpleado" component={Auth(gestionarEmpleado, true)}/>
+            <Route exact path="/AddEmpleado" component={Auth(AddEmpleado, true)}/>
           </div>
         </Suspense>
       </Switch>
