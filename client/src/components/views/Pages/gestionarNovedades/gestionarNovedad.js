@@ -59,8 +59,14 @@ function GestionarNovedades() {
         <td>
           <div className="d-flex justify-content-center">{novedad.siniestro.numPoliza }</div>
         </td>
-        <td>
-          <button onClick={()=> onClickDelete(novedad._id._id) } className="d-flex justify-content-center">Eliminar</button>
+        <td className="botonesRows">
+          <button onClick={()=> onClickDelete(novedad._id._id) } className="botones">Eliminar</button>
+        </td>
+        <td className="botonesRows">
+          <button onClick={()=> onClickDelete(novedad._id._id)} className="botones">Modificar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Exportar</button>
         </td>
       </tr>
     );

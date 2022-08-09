@@ -39,7 +39,6 @@ function GestionarVehiculos() {
   const renderVehiculos = Data.map((vehiculo, index) => {
     return (
       <tr className="userData" key={index}>
-        <td className="text-center">{vehiculo.vehiculo_id}</td>
         <td>
           <div className="d-flex justify-content-center">{vehiculo.marca}</div>
         </td>
@@ -58,8 +57,14 @@ function GestionarVehiculos() {
         <td>
           <div className="d-flex justify-content-center">{vehiculo.color}</div>
         </td>
-        <td>
-          <button onClick={()=> onClickDelete(vehiculo._id._id) } className="d-flex justify-content-center">Eliminar</button>
+        <td className="botonesRows">
+          <button onClick={()=> onClickDelete(vehiculo._id._id) } className="botones">Eliminar</button>
+        </td>
+        <td className="botonesRows">
+          <button onClick={()=> onClickDelete(vehiculo._id._id) } className="botones">Modificar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Exportar</button>
         </td>
       </tr>
     );
@@ -75,9 +80,6 @@ function GestionarVehiculos() {
           <table className="tableAuditory ml-5 mr-5">
             <thead>
               <tr className="trAuditory">
-                <th className="thAuditory">
-                  <h4 className="text-info text-center">ID</h4>
-                </th>
                 <th className="thAuditory">
                   <h4 className="text-info text-center">Marca</h4>
                 </th>

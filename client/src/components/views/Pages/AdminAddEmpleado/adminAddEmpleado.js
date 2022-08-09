@@ -189,7 +189,7 @@ function AddEmpleado(props) {
 
                 <Form.Item required label="Direccion">
                   <Input
-                    id="Direccion"
+                    id="direccion"
                     placeholder="Ingresar direccion del empleado"
                     type="text"
                     value={values.direccion}

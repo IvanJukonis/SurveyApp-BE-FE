@@ -43,6 +43,15 @@ function GestionarTerceros() {
         <td>
           <div className="d-flex justify-content-center">{tercero.telefono}</div>
         </td>
+        <td className="botonesRows">
+          <button  className="botones">Eliminar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Modificar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Exportar</button>
+        </td>
       </tr>
     );
   });

@@ -61,6 +61,15 @@ function GestionarEmpleados() {
         <td>
           <div className="d-flex justify-content-center">{empleado.fechaContratacion}</div>
         </td>
+        <td className="botonesRows">
+          <button  className="botones">Eliminar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Modificar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Exportar</button>
+        </td>
       </tr>
     );
   });

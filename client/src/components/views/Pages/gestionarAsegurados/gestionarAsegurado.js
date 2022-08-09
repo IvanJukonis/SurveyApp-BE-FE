@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./style.css";
+import "../style.css";
 
 function GestionarAsegurados() {
   const [Data, setData] = useState([]);
@@ -24,7 +24,6 @@ function GestionarAsegurados() {
   const renderAsegurados = Data.map((asegurado, index) => {
     return (
       <tr className="userData" key={index}>
-        <td className="text-center">{asegurado.asegurado_id}</td>
         <td>
           <div className="d-flex justify-content-center">{asegurado.nombre}</div>
         </td>
@@ -44,10 +43,16 @@ function GestionarAsegurados() {
           <div className="d-flex justify-content-center">{asegurado.telefono}</div>
         </td>
         <td>
-          <div className="d-flex justify-content-center">{asegurado.conductor}</div>
-        </td>
-        <td>
           <div className="d-flex justify-content-center">{asegurado.licencia}</div>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Eliminar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Modificar</button>
+        </td>
+        <td className="botonesRows">
+          <button  className="botones">Exportar</button>
         </td>
       </tr>
     );
@@ -55,7 +60,7 @@ function GestionarAsegurados() {
 
   return (
     <div>
-      <div>
+      <div className="fondo">
         <div className="mb-5 titleLogin container rounded mt-5 d-flex justify-content-center">
           <h1 className="text-white" > Asegurados </h1>
         </div>
@@ -63,9 +68,6 @@ function GestionarAsegurados() {
           <table className="tableAuditory ml-5 mr-5">
             <thead>
               <tr className="trAuditory">
-                <th className="thAuditory">
-                  <h4 className="text-info text-center">ID</h4>
-                </th>
                 <th className="thAuditory">
                   <h4 className="text-info text-center">Nombre</h4>
                 </th>
@@ -83,9 +85,6 @@ function GestionarAsegurados() {
                 </th>
                 <th className="thAuditory">
                   <h4 className="text-info text-center">Telefono</h4>
-                </th>
-                <th className="thAuditory">
-                  <h4 className="text-info text-center">Conductor</h4>
                 </th>
                 <th className="thAuditory">
                   <h4 className="text-info text-center">Licencia</h4>
